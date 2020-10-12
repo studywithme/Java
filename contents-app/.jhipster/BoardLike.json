@@ -1,0 +1,34 @@
+{
+    "name": "BoardLike",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "board",
+            "otherEntityName": "board",
+            "otherEntityRelationshipName": "board",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "2020-09-01",
+    "entityTableName": "board_like",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "applications": "*",
+    "skipClient": true
+}

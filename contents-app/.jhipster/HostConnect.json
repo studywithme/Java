@@ -1,0 +1,43 @@
+{
+    "name": "HostConnect",
+    "fields": [
+        {
+            "fieldName": "sourceUserId",
+            "fieldValidateRules": [
+                "required"
+            ],
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "activated",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "categoryMain",
+            "otherEntityName": "categoryMain",
+            "otherEntityRelationshipName": "categoryMain",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "2020-09-06",
+    "entityTableName": "host_connect",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "skipClient": true
+}

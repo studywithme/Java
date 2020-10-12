@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.contents",
+      "nativeLanguage": "ko"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "monolith",
+    "baseName": "contents",
+    "packageName": "com.contents",
+    "packageFolder": "com/contents",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": false,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NjIyMTM0NmZjMjQ5MWVhNWNlNzJlOTZhYWFmZjFkM2VhMWYxNzg1ODljMGJkMjYzODg1Yzg3MWU1OTM0OTZkNzIzMmYzMzhmZGRhMmUxYzZjOThkYWYzMDdmNTE1N2IxM2I2YzNhOTk1NjE0YjMwYWM5MTUzMWI2MjVkODUwNTc=",
+    "clientFramework": "angularX",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "primary",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "ko",
+    "languages": ["ko", "en", "ja"]
+  }
+}

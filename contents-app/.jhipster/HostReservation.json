@@ -1,0 +1,39 @@
+{
+    "name": "HostReservation",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldValidateRules": [
+                "required"
+            ],
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "hostSchedule",
+            "otherEntityName": "hostSchedule",
+            "otherEntityRelationshipName": "hostSchedule",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "2020-09-08",
+    "entityTableName": "host_reservation",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "skipClient": true
+}
