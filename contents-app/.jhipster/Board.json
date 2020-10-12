@@ -1,0 +1,90 @@
+{
+    "name": "Board",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "CategoryId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "boardType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "nickname",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "profileImageUrl",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 200
+        },
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 200
+        },
+        {
+            "fieldName": "content",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 2000
+        },
+        {
+            "fieldName": "countView",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "comment",
+            "otherEntityName": "boardComment",
+            "otherEntityRelationshipName": "board"
+        }
+    ],
+    "changelogDate": "2020-09-01",
+    "entityTableName": "board",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "applications": "*",
+    "skipClient": true
+}

@@ -1,0 +1,43 @@
+{
+    "name": "HostManager",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldValidateRules": [
+                "required"
+            ],
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "activated",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "appPublish",
+            "otherEntityName": "appPublish",
+            "otherEntityRelationshipName": "appPublish",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "2020-09-22",
+    "entityTableName": "host_manager",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetaModelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "skipClient": true
+}

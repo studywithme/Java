@@ -1,0 +1,95 @@
+{
+    "name": "AppPublish",
+    "fields": [
+        {
+            "fieldName": "clientId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "appName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "packageName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "bigImageUrl",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 150
+        },
+        {
+            "fieldName": "smallImageUrl",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 150
+        },
+        {
+            "fieldName": "activated",
+            "fieldValidateRules": [
+                "required"
+            ],
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "categoryMain",
+            "otherEntityName": "categoryMain",
+            "otherEntityRelationshipName": "appPublish"
+        }
+    ],
+    "changelogDate": "2020-09-02",
+    "entityTableName": "app_publish",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "skipClient": true
+}

@@ -1,0 +1,62 @@
+{
+    "name": "Order",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldValidateRules": [
+                "required"
+            ],
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "quantity",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "currencyCode",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength",
+                "required"
+            ],
+            "fieldValidateRulesMaxlength": 3
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "product",
+            "otherEntityName": "product",
+            "otherEntityRelationshipName": "product",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "2020-09-02",
+    "entityTableName": "order",
+    "dto": "mapstruct",
+    "pagination": "pager",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "skipClient": true
+}
